@@ -30,3 +30,4 @@ Android's request payload with file:
 "fileName":"IMG1.png"
 }
 ```
+Supports Android 11 or higher (API 30)
