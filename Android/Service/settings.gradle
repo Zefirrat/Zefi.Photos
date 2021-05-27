@@ -1,0 +1,2 @@
+rootProject.name = "zefi.photos.android.service"
+include ':app'
