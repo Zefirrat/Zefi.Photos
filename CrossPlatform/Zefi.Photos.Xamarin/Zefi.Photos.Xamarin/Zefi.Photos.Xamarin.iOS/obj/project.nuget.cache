@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "XdqwCfX6E7gt82oAxiC76iy+pzkUF01+sBJZcxp4w3EmtyPsNR9/fvbkmrm6SId6iZzS78a3pdkzP7hNOo/idw==",
+  "success": true,
+  "projectFilePath": "D:\\Git-Repositories\\GitHub\\Zefi.Photos\\CrossPlatform\\Zefi.Photos.Xamarin\\Zefi.Photos.Xamarin\\Zefi.Photos.Xamarin.iOS\\Zefi.Photos.Xamarin.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Zefirrat\\.nuget\\packages\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512"
+  ],
+  "logs": []
+}

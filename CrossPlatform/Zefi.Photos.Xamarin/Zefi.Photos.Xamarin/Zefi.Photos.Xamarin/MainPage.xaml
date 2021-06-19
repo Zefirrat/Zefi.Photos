@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Zefi.Photos.Xamarin"
+             xmlns:viewModels="clr-namespace:Zefi.Photos.Xamarin.ViewModels;assembly=Zefi.Photos.Xamarin"
+             x:Class="Zefi.Photos.Xamarin.MainPage">
+    <ContentPage.BindingContext>
+        <viewModels:MainPageViewModel />
+    </ContentPage.BindingContext>
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Label Text="Select folder for upload (with photos):" 
+           HorizontalOptions="Center"
+           VerticalOptions="StartAndExpand" />
+        <Label Text="{Binding Text}"
+               HorizontalOptions="Center"
+               VerticalOptions="Start"></Label>
+        
+        <Button Command="{Binding PickFileCommand}" 
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Text="Select folder"></Button>
+    </StackLayout>
+
+</ContentPage>

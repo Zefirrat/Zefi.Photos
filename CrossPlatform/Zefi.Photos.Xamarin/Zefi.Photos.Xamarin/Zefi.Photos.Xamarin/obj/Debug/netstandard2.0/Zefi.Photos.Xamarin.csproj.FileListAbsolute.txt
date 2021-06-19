@@ -1,0 +1,12 @@
+D:\Git-Repositories\GitHub\Zefi.Photos\CrossPlatform\Zefi.Photos.Xamarin\Zefi.Photos.Xamarin\Zefi.Photos.Xamarin\obj\Debug\netstandard2.0\Zefi.Photos.Xamarin.csproj.AssemblyReference.cache
+D:\Git-Repositories\GitHub\Zefi.Photos\CrossPlatform\Zefi.Photos.Xamarin\Zefi.Photos.Xamarin\Zefi.Photos.Xamarin\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\Git-Repositories\GitHub\Zefi.Photos\CrossPlatform\Zefi.Photos.Xamarin\Zefi.Photos.Xamarin\Zefi.Photos.Xamarin\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+D:\Git-Repositories\GitHub\Zefi.Photos\CrossPlatform\Zefi.Photos.Xamarin\Zefi.Photos.Xamarin\Zefi.Photos.Xamarin\obj\Debug\netstandard2.0\Zefi.Photos.Xamarin.AssemblyInfoInputs.cache
+D:\Git-Repositories\GitHub\Zefi.Photos\CrossPlatform\Zefi.Photos.Xamarin\Zefi.Photos.Xamarin\Zefi.Photos.Xamarin\obj\Debug\netstandard2.0\Zefi.Photos.Xamarin.AssemblyInfo.cs
+D:\Git-Repositories\GitHub\Zefi.Photos\CrossPlatform\Zefi.Photos.Xamarin\Zefi.Photos.Xamarin\Zefi.Photos.Xamarin\obj\Debug\netstandard2.0\Zefi.Photos.Xamarin.csproj.CoreCompileInputs.cache
+D:\Git-Repositories\GitHub\Zefi.Photos\CrossPlatform\Zefi.Photos.Xamarin\Zefi.Photos.Xamarin\Zefi.Photos.Xamarin\bin\Debug\netstandard2.0\Zefi.Photos.Xamarin.deps.json
+D:\Git-Repositories\GitHub\Zefi.Photos\CrossPlatform\Zefi.Photos.Xamarin\Zefi.Photos.Xamarin\Zefi.Photos.Xamarin\bin\Debug\netstandard2.0\Zefi.Photos.Xamarin.dll
+D:\Git-Repositories\GitHub\Zefi.Photos\CrossPlatform\Zefi.Photos.Xamarin\Zefi.Photos.Xamarin\Zefi.Photos.Xamarin\bin\Debug\netstandard2.0\Zefi.Photos.Xamarin.pdb
+D:\Git-Repositories\GitHub\Zefi.Photos\CrossPlatform\Zefi.Photos.Xamarin\Zefi.Photos.Xamarin\Zefi.Photos.Xamarin\obj\Debug\netstandard2.0\XamlC.stamp
+D:\Git-Repositories\GitHub\Zefi.Photos\CrossPlatform\Zefi.Photos.Xamarin\Zefi.Photos.Xamarin\Zefi.Photos.Xamarin\obj\Debug\netstandard2.0\Zefi.Photos.Xamarin.dll
+D:\Git-Repositories\GitHub\Zefi.Photos\CrossPlatform\Zefi.Photos.Xamarin\Zefi.Photos.Xamarin\Zefi.Photos.Xamarin\obj\Debug\netstandard2.0\Zefi.Photos.Xamarin.pdb
