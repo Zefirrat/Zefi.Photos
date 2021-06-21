@@ -20,6 +20,11 @@
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
                 Text="Select folder"></Button>
+        
+        <Button Command="{Binding ClearListCommand}" 
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Text="Clear list"></Button>
     </StackLayout>
 
 </ContentPage>

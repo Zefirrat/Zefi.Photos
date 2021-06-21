@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zefi.Photos.Xamarin.Android
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zefi.Photos.Xamarin.iOS", "Zefi.Photos.Xamarin\Zefi.Photos.Xamarin.iOS\Zefi.Photos.Xamarin.iOS.csproj", "{3F95F819-9AB1-4178-ACF3-9032A52C9996}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zefi.Photos.Database", "Zefi.Photos.Database\Zefi.Photos.Database.csproj", "{585FC803-0690-475A-A871-2135420AFB1D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|iPhone = Ad-Hoc|iPhone
@@ -82,5 +84,21 @@ Global
 		{3F95F819-9AB1-4178-ACF3-9032A52C9996}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{3F95F819-9AB1-4178-ACF3-9032A52C9996}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{3F95F819-9AB1-4178-ACF3-9032A52C9996}.Release|iPhoneSimulator.Deploy.0 = Release|iPhoneSimulator
+		{585FC803-0690-475A-A871-2135420AFB1D}.Ad-Hoc|iPhone.ActiveCfg = Debug|Any CPU
+		{585FC803-0690-475A-A871-2135420AFB1D}.Ad-Hoc|iPhone.Build.0 = Debug|Any CPU
+		{585FC803-0690-475A-A871-2135420AFB1D}.AppStore|iPhone.ActiveCfg = Debug|Any CPU
+		{585FC803-0690-475A-A871-2135420AFB1D}.AppStore|iPhone.Build.0 = Debug|Any CPU
+		{585FC803-0690-475A-A871-2135420AFB1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{585FC803-0690-475A-A871-2135420AFB1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{585FC803-0690-475A-A871-2135420AFB1D}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{585FC803-0690-475A-A871-2135420AFB1D}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{585FC803-0690-475A-A871-2135420AFB1D}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{585FC803-0690-475A-A871-2135420AFB1D}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{585FC803-0690-475A-A871-2135420AFB1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{585FC803-0690-475A-A871-2135420AFB1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{585FC803-0690-475A-A871-2135420AFB1D}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{585FC803-0690-475A-A871-2135420AFB1D}.Release|iPhone.Build.0 = Release|Any CPU
+		{585FC803-0690-475A-A871-2135420AFB1D}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{585FC803-0690-475A-A871-2135420AFB1D}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

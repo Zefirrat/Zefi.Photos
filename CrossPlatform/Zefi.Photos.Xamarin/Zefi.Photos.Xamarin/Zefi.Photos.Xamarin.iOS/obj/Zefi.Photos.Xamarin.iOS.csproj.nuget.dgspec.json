@@ -4,6 +4,70 @@
     "D:\\Git-Repositories\\GitHub\\Zefi.Photos\\CrossPlatform\\Zefi.Photos.Xamarin\\Zefi.Photos.Xamarin\\Zefi.Photos.Xamarin.iOS\\Zefi.Photos.Xamarin.iOS.csproj": {}
   },
   "projects": {
+    "D:\\Git-Repositories\\GitHub\\Zefi.Photos\\CrossPlatform\\Zefi.Photos.Xamarin\\Zefi.Photos.Database\\Zefi.Photos.Database.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Git-Repositories\\GitHub\\Zefi.Photos\\CrossPlatform\\Zefi.Photos.Xamarin\\Zefi.Photos.Database\\Zefi.Photos.Database.csproj",
+        "projectName": "Zefi.Photos.Database",
+        "projectPath": "D:\\Git-Repositories\\GitHub\\Zefi.Photos\\CrossPlatform\\Zefi.Photos.Xamarin\\Zefi.Photos.Database\\Zefi.Photos.Database.csproj",
+        "packagesPath": "C:\\Users\\Zefirrat\\.nuget\\packages\\",
+        "outputPath": "D:\\Git-Repositories\\GitHub\\Zefi.Photos\\CrossPlatform\\Zefi.Photos.Xamarin\\Zefi.Photos.Database\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Zefirrat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[5.0.0.2012, )"
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.8.0-beta, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "D:\\Git-Repositories\\GitHub\\Zefi.Photos\\CrossPlatform\\Zefi.Photos.Xamarin\\Zefi.Photos.Xamarin\\Zefi.Photos.Xamarin.iOS\\Zefi.Photos.Xamarin.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -38,6 +102,10 @@
       "frameworks": {
         "xamarinios10": {
           "dependencies": {
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.6.1, )"
+            },
             "Xamarin.Forms": {
               "target": "Package",
               "version": "[5.0.0.2012, )"
@@ -71,16 +139,20 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netstandard2.0"
+          "netstandard2.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netstandard2.0": {
-            "targetAlias": "netstandard2.0",
-            "projectReferences": {}
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "D:\\Git-Repositories\\GitHub\\Zefi.Photos\\CrossPlatform\\Zefi.Photos.Xamarin\\Zefi.Photos.Database\\Zefi.Photos.Database.csproj": {
+                "projectPath": "D:\\Git-Repositories\\GitHub\\Zefi.Photos\\CrossPlatform\\Zefi.Photos.Xamarin\\Zefi.Photos.Database\\Zefi.Photos.Database.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -90,14 +162,12 @@
         }
       },
       "frameworks": {
-        "netstandard2.0": {
-          "targetAlias": "netstandard2.0",
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
           "dependencies": {
-            "NETStandard.Library": {
-              "suppressParent": "All",
+            "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[2.0.3, )",
-              "autoReferenced": true
+              "version": "[1.6.1, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
@@ -114,6 +184,11 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
         }
       }
