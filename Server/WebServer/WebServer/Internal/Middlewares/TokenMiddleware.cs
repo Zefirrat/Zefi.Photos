@@ -25,8 +25,6 @@ namespace WebServer.Internal.Middlewares
                 .AnyAsync(ut => ut.TokenHash == hash);
             if (exist)
             {
-                var userToken = await dbContext.UserTokens.AsNoTracking().FirstAsync(ut => ut.TokenHash == hash);
-                context.User = new ClaimsPrincipal(userToken.User);
                 await _next.Invoke(context);
             }
             else
