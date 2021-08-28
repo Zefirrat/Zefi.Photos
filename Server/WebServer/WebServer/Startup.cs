@@ -13,6 +13,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Serilog;
+using WebServer.Db.Context;
+using WebServer.Internal.Middlewares;
 
 namespace WebServer
 {
@@ -31,6 +33,8 @@ namespace WebServer
             services.AddControllers();
             services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new OpenApiInfo {Title = "WebServer", Version = "v1"}); });
 
+            services.AddDbContext<PhotosDbContext>();
+            
             services.AddMediatR(typeof(Startup));
         }
 
@@ -44,7 +48,9 @@ namespace WebServer
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebServer v1"));
             }
 
-            app.UseSerilogRequestLogging(); 
+            app.UseSerilogRequestLogging();
+
+            app.UseMiddleware<TokenMiddleware>();
             
             app.UseHttpsRedirection();
 
