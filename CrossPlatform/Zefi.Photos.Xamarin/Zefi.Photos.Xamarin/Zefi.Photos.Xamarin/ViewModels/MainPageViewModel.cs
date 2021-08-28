@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration;
 using Zefi.Photos.Database;
 using Zefi.Photos.Database.Models;
 using Zefi.Photos.Xamarin.Annotations;
@@ -26,9 +27,9 @@ namespace Zefi.Photos.Xamarin.ViewModels
 
         public ImageSource Image { get; set; }
 
-        public ICommand PickFileCommand
+        public ICommand AddFilePathCommand
         {
-            get => _pickFileCommand ?? new Command(async () => await PickAndShow());
+            get => _pickFileCommand ?? new Command(async () => await _addFilePathCommand());
             set => _pickFileCommand = value;
         }
 
@@ -37,7 +38,6 @@ namespace Zefi.Photos.Xamarin.ViewModels
             get => _clearListCommand ?? new Command(async () => await ClearList());
             set => _clearListCommand = value;
         }
-
 
         public MainPageViewModel()
         {
@@ -48,15 +48,23 @@ namespace Zefi.Photos.Xamarin.ViewModels
         private string _text;
         private ICommand _clearListCommand;
 
+        private string _folderEntry;
+
+        public string FolderEntry
+        {
+            get => _folderEntry;
+            set { _folderEntry = value; }
+        }
+
         private async Task DrawText()
         {
             var db = await ZefiPhotosDatabase.Instance;
-            var items = await db.GetItemsAsync();
+            var items = await db.GetItemsSqlAsync();
             var itemsString = string.Empty;
 
             foreach (var uploadFolderModel in items)
             {
-                itemsString = $"{itemsString};{uploadFolderModel.FolderPath}";
+                itemsString = $"{itemsString}\n{uploadFolderModel.FolderPath}";
             }
 
             Text = itemsString;
@@ -85,9 +93,8 @@ namespace Zefi.Photos.Xamarin.ViewModels
                 var result = await FilePicker.PickAsync(options);
                 if (result != null)
                 {
-                    ZefiPhotosDatabase db = await ZefiPhotosDatabase.Instance;
-                    await db.SaveItemAsync(new UploadFolderModel {Id = 0, FolderPath = Path.GetDirectoryName(result.FullPath)});
-                    await DrawText();
+                    var resultFullPath = result.FullPath;
+                    await _addStringToDb(resultFullPath);
                 }
 
                 return result;
@@ -98,6 +105,19 @@ namespace Zefi.Photos.Xamarin.ViewModels
             }
 
             return null;
+        }
+
+        private async Task _addFilePathCommand()
+        {
+            await _addStringToDb(FolderEntry);
+        }
+
+        private async Task _addStringToDb(string resultFullPath)
+        {
+            ZefiPhotosDatabase db = await ZefiPhotosDatabase.Instance;
+            var items = await db.GetItemsSqlAsync();
+            await db.SaveItemAsync(new UploadFolderModel {Id = items.Count, FolderPath = resultFullPath});
+            await DrawText();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

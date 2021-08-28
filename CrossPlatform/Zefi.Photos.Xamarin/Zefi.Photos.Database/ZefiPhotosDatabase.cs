@@ -21,31 +21,32 @@ namespace Zefi.Photos.Database
         {
             Database = new SQLiteAsyncConnection(Constants.DatabasePath, Constants.Flags);
         }
-        public Task<List<UploadFolderModel>> GetItemsAsync()
+        public async Task<List<UploadFolderModel>> GetItemsAsync()
         {
-            return Database.Table<UploadFolderModel>().ToListAsync();
+            return await Database.Table<UploadFolderModel>().ToListAsync();
         }
 
-        public Task<List<UploadFolderModel>> GetItemsSqlAsync()
+        public async Task<List<UploadFolderModel>> GetItemsSqlAsync()
         {
             // SQL queries are also possible
-            return Database.QueryAsync<UploadFolderModel>("SELECT * FROM [UploadFolderModel] ");
+            return await Database.QueryAsync<UploadFolderModel>("SELECT * FROM [UploadFolderModel] ");
         }
 
-        public Task<UploadFolderModel> GetItemAsync(int id)
+        public async Task<UploadFolderModel> GetItemAsync(int id)
         {
-            return Database.Table<UploadFolderModel>().Where(i => i.Id == id).FirstOrDefaultAsync();
+            return await Database.Table<UploadFolderModel>().Where(i => i.Id == id).FirstOrDefaultAsync();
         }
 
-        public Task<int> SaveItemAsync(UploadFolderModel item)
+        public async Task<int> SaveItemAsync(UploadFolderModel item)
         {
-            if (item.Id != 0)
+            var exist = await Database.Table<UploadFolderModel>().FirstOrDefaultAsync(i => i.Id == item.Id);
+            if (exist!=null)
             {
-                return Database.UpdateAsync(item);
+                return await Database.UpdateAsync(item);
             }
             else
             {
-                return Database.InsertAsync(item);
+                return await Database.InsertAsync(item);
             }
         }
 

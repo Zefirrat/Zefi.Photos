@@ -1,4 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Zefi.Photos.Xamarin"
@@ -9,22 +10,23 @@
     </ContentPage.BindingContext>
     <StackLayout>
         <!-- Place new controls here -->
-        <Label Text="Select folder for upload (with photos):" 
-           HorizontalOptions="Center"
-           VerticalOptions="StartAndExpand" />
+        <Label Text="Select folder for upload (with photos):"
+               HorizontalOptions="Center"
+               VerticalOptions="StartAndExpand" />
         <Label Text="{Binding Text}"
                HorizontalOptions="Center"
-               VerticalOptions="Start"></Label>
-        
-        <Button Command="{Binding PickFileCommand}" 
+               VerticalOptions="Start" />
+
+        <Entry Text="{Binding FolderEntry, Mode=TwoWay}" />
+        <Button Command="{Binding AddFilePathCommand}"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
-                Text="Select folder"></Button>
-        
-        <Button Command="{Binding ClearListCommand}" 
+                Text="Add folder to list" />
+
+        <Button Command="{Binding ClearListCommand}"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
-                Text="Clear list"></Button>
+                Text="Clear list" />
     </StackLayout>
 
 </ContentPage>

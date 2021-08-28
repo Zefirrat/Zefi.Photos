@@ -37,6 +37,9 @@ namespace WebServer
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .UseSerilog()
-                .ConfigureWebHostDefaults(webBuilder => { webBuilder.UseStartup<Startup>(); });
+                .ConfigureWebHostDefaults(webBuilder => { 
+                    webBuilder.UseStartup<Startup>();
+                    webBuilder.UseUrls("http://localhost:8765", "http://192.168.31.210:8765");
+                });
     }
 }

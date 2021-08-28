@@ -27,6 +27,7 @@
         <ErrorReport>prompt</ErrorReport>
         <WarningLevel>4</WarningLevel>
         <AndroidLinkMode>None</AndroidLinkMode>
+        <AndroidSupportedAbis>armeabi-v7a;x86;arm64-v8a;x86_64</AndroidSupportedAbis>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
         <DebugSymbols>true</DebugSymbols>
@@ -37,6 +38,7 @@
         <WarningLevel>4</WarningLevel>
         <AndroidManagedSymbols>true</AndroidManagedSymbols>
         <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+        <AndroidSupportedAbis>armeabi-v7a;x86;arm64-v8a;x86_64</AndroidSupportedAbis>
     </PropertyGroup>
     <ItemGroup>
         <Reference Include="Mono.Android" />
@@ -44,9 +46,13 @@
         <Reference Include="System.Core" />
         <Reference Include="System.Xml.Linq" />
         <Reference Include="System.Xml" />
+        <Reference Include="Xamarin.Android.Arch.Work.Runtime, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>..\..\packages\Xamarin.Android.Arch.Work.Runtime.1.0.0.3\lib\monoandroid90\Xamarin.Android.Arch.Work.Runtime.dll</HintPath>
+        </Reference>
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+        <PackageReference Include="Xamarin.AndroidX.Work.Runtime" Version="2.5.0.3" />
+        <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
         <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
     </ItemGroup>
     <ItemGroup>
@@ -66,6 +72,10 @@
         <AndroidResource Include="Resources\values\colors.xml" />
     </ItemGroup>
     <ItemGroup>
+        <ProjectReference Include="..\..\Zefi.Photos.BackgroundService.Android\Zefi.Photos.BackgroundService.Android.csproj">
+          <Project>{06c75f77-f235-4b42-a063-9c80b2ffadba}</Project>
+          <Name>Zefi.Photos.BackgroundService.Android</Name>
+        </ProjectReference>
         <ProjectReference Include="..\Zefi.Photos.Xamarin\Zefi.Photos.Xamarin.csproj">
             <Project>{2B96C6D1-C2F8-4403-9BFA-39A5A3B00718}</Project>
             <Name>Zefi.Photos.Xamarin</Name>
